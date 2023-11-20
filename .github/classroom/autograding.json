@@ -1,0 +1,84 @@
+{
+    "tests": [
+        {
+            "name": "Check if HTML is valid",
+            "setup": "",
+            "run": "npm exec html-validate index.html",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 2,
+            "points": 10
+        },
+        {
+            "name": "Test Bootstrap CSS",
+            "setup": "",
+            "run": "npx jest --testNamePattern 'contains Bootstrap CSS'",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 2,
+            "points": 10
+        },
+        {
+            "name": "Test Bootstrap CDD CDN",
+            "setup": "",
+            "run": "npx jest --testNamePattern 'loads CSS from correct CDN'",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 2,
+            "points": 10
+        },
+        {
+            "name": "Test Bootstrap JS",
+            "setup": "",
+            "run": "npx jest --testNamePattern 'contains Bootstrap JS'",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 2,
+            "points": 10
+        },
+        {
+            "name": "Test Bootstrap JS CDN",
+            "setup": "",
+            "run": "npx jest --testNamePattern 'loads JS from correct CDN'",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 2,
+            "points": 10
+        },
+        {
+            "name": "Test Navbar",
+            "setup": "",
+            "run": "npx jest --testNamePattern 'contains a navbar'",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 2,
+            "points": 10
+        },
+        {
+            "name": "Test Container",
+            "setup": "",
+            "run": "npx jest --testNamePattern 'contains a container'",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 2,
+            "points": 10
+        },
+        {
+            "name": "Test Footer",
+            "setup": "",
+            "run": "npx jest --testNamePattern 'contains a footer'",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 2,
+            "points": 10
+        }
+    ]
+}
