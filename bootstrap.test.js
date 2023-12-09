@@ -1,64 +1,80 @@
-const { readFileSync } = require('fs');
-const { resolve } = require('path');
-const { TextEncoder, TextDecoder } = require("util");
-Object.assign(global, { TextDecoder, TextEncoder });
-const jsdom = require("jsdom");
-const { JSDOM } = jsdom;
-
-const html = readFileSync(resolve(__dirname, './index.html'), 'utf8');
-// Use require instead of import
-
-
-let dom;
-let container;
-
-describe('index.html', () => {
-    beforeEach(() => {
-        dom = new JSDOM(html);
-        doc = dom.window.document;
-        container = dom.window.document.body;
+const {
+    name,
+    age,
+    isStudent,
+    ageMessage,
+    studentMessage,
+    printNumbers,
+    printReversedNumbers,
+    calculateSquare,
+    fruits,
+    fruitsMessage,
+  } = require('./script');
+  
+  describe('JavaScript Basics Tests', () => {
+    // Aufgabe 1 Tests
+    describe('Task 1: Variables and Data Types', () => {
+      it('should have a variable named "name"', () => {
+        expect(name).toBeDefined();
+      });
+  
+      it('should have a variable named "age"', () => {
+        expect(age).toBeDefined();
+      });
+  
+      it('should have a variable named "isStudent"', () => {
+        expect(isStudent).toBeDefined();
+      });
     });
-
-    it('contains Bootstrap CSS', () => {
-        const linkElement = doc.querySelector('link[rel="stylesheet"][href*="bootstrap"]');
-        // const linkElement = doc.querySelector('link');
-        expect(linkElement).not.toBeNull();
-    })
-
-    it('loads CSS from correct CDN', () => {
-        const linkElement = doc.querySelector('link[rel="stylesheet"][href*="bootstrap"]');
-        const href = linkElement.href;
-        const isCorrectCDN = href.includes('cdn.jsdelivr.net')
-        expect(isCorrectCDN).toBe(true);
-    })
-
-    it('contains Bootstrap JS', () => {
-        const scriptElement = container.querySelector('script');
-        console.log(scriptElement.src);
-        expect(scriptElement).not.toBeNull();
-    })
-
-    it('loads JS from correct CDN', () => {
-        const scriptElement = container.querySelector('script');
-        const src = scriptElement.src;
-        const isCorrectCDN = src.includes('cdn.jsdelivr.net')
-        expect(isCorrectCDN).toBe(true);
-    })
-
-    it('contains a navbar', () => {
-        expect(container.querySelector('.navbar')).not.toBeNull();
-        expect(container.querySelector('.navbar-brand')).not.toBeNull();
-        expect(container.querySelectorAll('.nav-item').length).toBeGreaterThan(0);
-        expect(container.querySelectorAll('.nav-link').length).toBeGreaterThan(0);
+  
+    // Aufgabe 2 Tests
+    describe('Task 2: Conditions', () => {
+      it('should check if age is greater than or equal to 18', () => {
+        expect(ageMessage).toBe("Sie sind volljährig");
+      });
+  
+      it('should check if the person is a student', () => {
+        expect(studentMessage).toBe("Sie sind Student");
+      });
     });
-
-    it('contains a container', () => {
-        expect(container.querySelector('.container')).not.toBeNull();
+  
+    // Aufgabe 3 Tests
+    describe('Task 3: Loops', () => {
+      it('should print numbers from 1 to 5', () => {
+        const expectedOutput = "1\n2\n3\n4\n5\n";
+        const spy = jest.spyOn(console, 'log').mockImplementation(() => {});
+        printNumbers();
+        expect(spy).toHaveBeenCalledWith(expectedOutput);
+        spy.mockRestore();
+      });
+  
+      it('should print numbers from 5 to 1 in reverse', () => {
+        const expectedOutput = "5\n4\n3\n2\n1\n";
+        const spy = jest.spyOn(console, 'log').mockImplementation(() => {});
+        printReversedNumbers();
+        expect(spy).toHaveBeenCalledWith(expectedOutput);
+        spy.mockRestore();
+      });
     });
-
-    it('contains a footer', () => {
-        expect(container.querySelector('footer')).not.toBeNull();
+  
+    // Aufgabe 4 Tests
+    describe('Task 4: Functions', () => {
+      it('should calculate the square of a number', () => {
+        expect(calculateSquare(4)).toBe(16);
+      });
     });
-
-    // Weitere Tests für andere Bootstrap-Klassen und -Komponenten können hier hinzugefügt werden.
-});
+  
+    // Aufgabe 5 Tests
+    describe('Task 5: Arrays', () => {
+      it('should have an array named "fruits"', () => {
+        expect(fruits).toBeDefined();
+        expect(Array.isArray(fruits)).toBe(true);
+      });
+  
+      it('should check the length of the fruits array', () => {
+        expect(fruits.length).toBeGreaterThan(0);
+        expect(fruitsMessage).toBe("Sie haben genug Früchte");
+      });
+    });
+  });
+  

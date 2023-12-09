@@ -1,84 +1,165 @@
 {
     "tests": [
-        {
-            "name": "Check if HTML is valid",
-            "setup": "",
-            "run": "npm exec html-validate index.html",
-            "input": "",
-            "output": "",
-            "comparison": "included",
-            "timeout": 2,
-            "points": 10
-        },
-        {
-            "name": "Test Bootstrap CSS",
-            "setup": "",
-            "run": "npx jest --testNamePattern 'contains Bootstrap CSS'",
-            "input": "",
-            "output": "",
-            "comparison": "included",
-            "timeout": 2,
-            "points": 10
-        },
-        {
-            "name": "Test Bootstrap CDD CDN",
-            "setup": "",
-            "run": "npx jest --testNamePattern 'loads CSS from correct CDN'",
-            "input": "",
-            "output": "",
-            "comparison": "included",
-            "timeout": 2,
-            "points": 10
-        },
-        {
-            "name": "Test Bootstrap JS",
-            "setup": "",
-            "run": "npx jest --testNamePattern 'contains Bootstrap JS'",
-            "input": "",
-            "output": "",
-            "comparison": "included",
-            "timeout": 2,
-            "points": 10
-        },
-        {
-            "name": "Test Bootstrap JS CDN",
-            "setup": "",
-            "run": "npx jest --testNamePattern 'loads JS from correct CDN'",
-            "input": "",
-            "output": "",
-            "comparison": "included",
-            "timeout": 2,
-            "points": 10
-        },
-        {
-            "name": "Test Navbar",
-            "setup": "",
-            "run": "npx jest --testNamePattern 'contains a navbar'",
-            "input": "",
-            "output": "",
-            "comparison": "included",
-            "timeout": 2,
-            "points": 10
-        },
-        {
-            "name": "Test Container",
-            "setup": "",
-            "run": "npx jest --testNamePattern 'contains a container'",
-            "input": "",
-            "output": "",
-            "comparison": "included",
-            "timeout": 2,
-            "points": 10
-        },
-        {
-            "name": "Test Footer",
-            "setup": "",
-            "run": "npx jest --testNamePattern 'contains a footer'",
-            "input": "",
-            "output": "",
-            "comparison": "included",
-            "timeout": 2,
-            "points": 10
-        }
+      {
+        "name": "JavaScript Basics Tests",
+        "setup": "",
+        "run": "npx jest --testNamePattern 'JavaScript Basics Tests'",
+        "input": "",
+        "output": "",
+        "comparison": "included",
+        "timeout": 5,
+        "points": 50
+      },
+      {
+        "name": "Task 1: Variables and Data Types",
+        "setup": "",
+        "run": "npx jest --testNamePattern 'Task 1: Variables and Data Types'",
+        "input": "",
+        "output": "",
+        "comparison": "included",
+        "timeout": 2,
+        "points": 10
+      },
+      {
+        "name": "Task 1.1: should have a variable named 'name'",
+        "setup": "",
+        "run": "npx jest --testNamePattern 'should have a variable named \"name\"'",
+        "input": "",
+        "output": "",
+        "comparison": "included",
+        "timeout": 1,
+        "points": 5
+      },
+      {
+        "name": "Task 1.2: should have a variable named 'age'",
+        "setup": "",
+        "run": "npx jest --testNamePattern 'should have a variable named \"age\"'",
+        "input": "",
+        "output": "",
+        "comparison": "included",
+        "timeout": 1,
+        "points": 5
+      },
+      {
+        "name": "Task 1.3: should have a variable named 'isStudent'",
+        "setup": "",
+        "run": "npx jest --testNamePattern 'should have a variable named \"isStudent\"'",
+        "input": "",
+        "output": "",
+        "comparison": "included",
+        "timeout": 1,
+        "points": 5
+      },
+      {
+        "name": "Task 2: Conditions",
+        "setup": "",
+        "run": "npx jest --testNamePattern 'Task 2: Conditions'",
+        "input": "",
+        "output": "",
+        "comparison": "included",
+        "timeout": 2,
+        "points": 10
+      },
+      {
+        "name": "Task 2.1: should check if age is greater than or equal to 18",
+        "setup": "",
+        "run": "npx jest --testNamePattern 'should check if age is greater than or equal to 18'",
+        "input": "",
+        "output": "",
+        "comparison": "included",
+        "timeout": 1,
+        "points": 5
+      },
+      {
+        "name": "Task 2.2: should check if the person is a student",
+        "setup": "",
+        "run": "npx jest --testNamePattern 'should check if the person is a student'",
+        "input": "",
+        "output": "",
+        "comparison": "included",
+        "timeout": 1,
+        "points": 5
+      },
+      {
+        "name": "Task 3: Loops",
+        "setup": "",
+        "run": "npx jest --testNamePattern 'Task 3: Loops'",
+        "input": "",
+        "output": "",
+        "comparison": "included",
+        "timeout": 2,
+        "points": 10
+      },
+      {
+        "name": "Task 3.1: should print numbers from 1 to 5",
+        "setup": "",
+        "run": "npx jest --testNamePattern 'should print numbers from 1 to 5'",
+        "input": "",
+        "output": "",
+        "comparison": "included",
+        "timeout": 1,
+        "points": 5
+      },
+      {
+        "name": "Task 3.2: should print numbers from 5 to 1 in reverse",
+        "setup": "",
+        "run": "npx jest --testNamePattern 'should print numbers from 5 to 1 in reverse'",
+        "input": "",
+        "output": "",
+        "comparison": "included",
+        "timeout": 1,
+        "points": 5
+      },
+      {
+        "name": "Task 4: Functions",
+        "setup": "",
+        "run": "npx jest --testNamePattern 'Task 4: Functions'",
+        "input": "",
+        "output": "",
+        "comparison": "included",
+        "timeout": 2,
+        "points": 10
+      },
+      {
+        "name": "Task 4.1: should calculate the square of a number",
+        "setup": "",
+        "run": "npx jest --testNamePattern 'should calculate the square of a number'",
+        "input": "",
+        "output": "",
+        "comparison": "included",
+        "timeout": 1,
+        "points": 5
+      },
+      {
+        "name": "Task 5: Arrays",
+        "setup": "",
+        "run": "npx jest --testNamePattern 'Task 5: Arrays'",
+        "input": "",
+        "output": "",
+        "comparison": "included",
+        "timeout": 2,
+        "points": 10
+      },
+      {
+        "name": "Task 5.1: should have an array named 'fruits'",
+        "setup": "",
+        "run": "npx jest --testNamePattern 'should have an array named \"fruits\"'",
+        "input": "",
+        "output": "",
+        "comparison": "included",
+        "timeout": 1,
+        "points": 5
+      },
+      {
+        "name": "Task 5.2: should check the length of the fruits array",
+        "setup": "",
+        "run": "npx jest --testNamePattern 'should check the length of the fruits array'",
+        "input": "",
+        "output": "",
+        "comparison": "included",
+        "timeout": 1,
+        "points": 5
+      }
     ]
-}
+  }
+  
