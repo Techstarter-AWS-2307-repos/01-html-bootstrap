@@ -30,7 +30,7 @@ import { name, age, isStudent, ageMessage, studentMessage, printNumbers, printRe
     // Aufgabe 3 Tests
     describe('Task 3: Loops', () => {
       it('should print numbers from 1 to 5', () => {
-        const expectedOutput = ["1", "2", "3", "4", "5"];
+        const expectedOutput = [1, 2, 3, 4, 5];
         const spy = jest.spyOn(console, 'log').mockImplementation(() => {});
         printNumbers();
         const receivedOutput = spy.mock.calls.map(args => args[0]);
@@ -39,7 +39,7 @@ import { name, age, isStudent, ageMessage, studentMessage, printNumbers, printRe
       });
       
       it('should print numbers from 5 to 1 in reverse', () => {
-        const expectedOutput = ["5", "4", "3", "2", "1"];
+        const expectedOutput = [5, 4, 3, 2, 1]; // Numbers, not strings
         const spy = jest.spyOn(console, 'log').mockImplementation(() => {});
         printReversedNumbers();
         const receivedOutput = spy.mock.calls.map(args => args[0]);
