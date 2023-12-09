@@ -1,5 +1,5 @@
 // jest.config.js
 module.exports = {
   testEnvironment: 'jest-environment-jsdom',
-  extensionsToTreatAsEsm: [] 
+  // weitere Konfigurationsoptionen...
 };

@@ -1,15 +1,4 @@
-const {
-    name,
-    age,
-    isStudent,
-    ageMessage,
-    studentMessage,
-    printNumbers,
-    printReversedNumbers,
-    calculateSquare,
-    fruits,
-    fruitsMessage,
-  } = require('./script');
+import { name, age, isStudent, ageMessage, studentMessage, printNumbers, printReversedNumbers, calculateSquare, fruits, fruitsMessage} from './script';
   
   describe('JavaScript Basics Tests', () => {
     // Aufgabe 1 Tests
