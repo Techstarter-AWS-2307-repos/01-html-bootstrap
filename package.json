@@ -2,7 +2,8 @@
   "name": "02-html-bootstrap",
   "version": "1.0.0",
   "description": "In dieser Aufgabe werden Sie eine persönliche Portfolio-Webseite mit Bootstrap 5 erstellen. Folgen Sie den Anweisungen sorgfältig und stellen Sie sicher, dass Sie alle Schritte abschließen.",
-  "main": "index.js",
+  "main": "script.js",
+  "type": "module",
   "scripts": {
     "test": "jest"
   },

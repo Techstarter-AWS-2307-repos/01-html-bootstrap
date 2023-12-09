@@ -1,5 +1,4 @@
-// jest.config.js
-module.exports = {
-  testEnvironment: 'jest-environment-jsdom',
-  // weitere Konfigurationsoptionen...
+export default {
+  extensionsToTreatAsEsm: ['.mjs'],
+  testEnvironment: 'node',
 };
