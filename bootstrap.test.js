@@ -30,18 +30,20 @@ import { name, age, isStudent, ageMessage, studentMessage, printNumbers, printRe
     // Aufgabe 3 Tests
     describe('Task 3: Loops', () => {
       it('should print numbers from 1 to 5', () => {
-        const expectedOutput = "1\n2\n3\n4\n5\n";
+        const expectedOutput = ["1", "2", "3", "4", "5"];
         const spy = jest.spyOn(console, 'log').mockImplementation(() => {});
         printNumbers();
-        expect(spy).toHaveBeenCalledWith(expectedOutput);
+        const receivedOutput = spy.mock.calls.map(args => args[0]);
+        expect(receivedOutput).toEqual(expectedOutput);
         spy.mockRestore();
       });
-  
+      
       it('should print numbers from 5 to 1 in reverse', () => {
-        const expectedOutput = "5\n4\n3\n2\n1\n";
+        const expectedOutput = ["5", "4", "3", "2", "1"];
         const spy = jest.spyOn(console, 'log').mockImplementation(() => {});
         printReversedNumbers();
-        expect(spy).toHaveBeenCalledWith(expectedOutput);
+        const receivedOutput = spy.mock.calls.map(args => args[0]);
+        expect(receivedOutput).toEqual(expectedOutput);
         spy.mockRestore();
       });
     });
